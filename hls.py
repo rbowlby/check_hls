@@ -29,7 +29,7 @@ class Stream():
         file object. Exception raised for requests beyond timeout in seconds.'''
 
         self.host = '{}:{}'.format(host, port) if port else host
-        self.path = '/{}{}'.format(token, path) if token else self.path
+        self.path = '/{}{}'.format(token, path) if token else path
         proto = 'https' if ssl else 'http'
         self.addr = '{}://{}{}'.format(proto, self.host, self.path)
         self.timeout = timeout
